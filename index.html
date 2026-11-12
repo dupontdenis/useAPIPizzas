@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pizza API Tester 🍕</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+  <div class="container">
+    <h1 class="main-title">🍕 Pizza API Tester 🍕</h1>
+    <p class="subtitle">
+      <a href="https://mypizzasapi.onrender.com/" target="_blank" rel="noopener">
+        🔗 https://mypizzasapi.onrender.com/
+      </a>
+    </p>
+
+    <!-- Controls Card -->
+    <div class="card">
+      <div class="card-header">
+        <h3>⚡ Choose an API Endpoint</h3>
+      </div>
+      <div class="card-body">
+        <div class="button-grid">
+          <button id="btn-get-all-pizzas" class="btn btn-primary">
+            📋 Get All Pizzas
+          </button>
+          <button id="btn-get-pizza-by-id" class="btn btn-info">
+            🔍 Get Pizza By ID
+          </button>
+          <button id="btn-get-pizzas-with-prices" class="btn btn-success">
+            💰 Get Pizzas With Prices
+          </button>
+          <button id="btn-get-ingredient-prices" class="btn btn-warning">
+            🧾 Get Ingredient Prices
+          </button>
+          <button id="btn-search-by-ingredients" class="btn btn-secondary">
+            🔎 Search By Ingredients
+          </button>
+          <button id="btn-get-pizza-price" class="btn btn-dark">
+            💵 Get Pizza Price
+          </button>
+          <button id="btn-compute-custom-price" class="btn btn-outline">
+            🎨 Compute Custom Price
+          </button>
+        </div>
+
+        <!-- Input for Get Pizza By ID -->
+        <div id="input-byId" class="input-section">
+          <div class="input-card">
+            <label for="pizzaId">Enter Pizza ID:</label>
+            <input type="text" id="pizzaId" placeholder="e.g., b3b9d1f2-5c3e-45d7-8b27-2f1a6b2e5c22">
+            <button id="submit-pizza-by-id" class="btn btn-info">
+              🔍 Get Pizza
+            </button>
+          </div>
+        </div>
+
+        <!-- Input for Search By Ingredients -->
+        <div id="input-search" class="input-section">
+          <div class="input-card">
+            <label for="searchIngredients">Enter Ingredients (emoji, comma-separated):</label>
+            <input type="text" id="searchIngredients" placeholder="e.g., 🍅,🧀,🍄">
+            <button id="submit-search-pizzas" class="btn btn-secondary">
+              🔎 Search Pizzas
+            </button>
+          </div>
+        </div>
+
+        <!-- Input for Get Pizza Price -->
+        <div id="input-price" class="input-section">
+          <div class="input-card">
+            <label for="priceId">Enter Pizza ID:</label>
+            <input type="text" id="priceId" placeholder="e.g., b3b9d1f2-5c3e-45d7-8b27-2f1a6b2e5c22">
+            <button id="submit-pizza-price" class="btn btn-dark">
+              💵 Get Price
+            </button>
+          </div>
+        </div>
+
+        <!-- Input for Custom Pizza Price -->
+        <div id="input-custom" class="input-section">
+          <div class="input-card">
+            <label for="customIngredients">Enter Ingredients (emoji, comma-separated):</label>
+            <input type="text" id="customIngredients" placeholder="e.g., 🍅,🧀,🍄,🌶️">
+            <button id="submit-custom-price" class="btn btn-outline">
+              🎨 Compute Price
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Results Card -->
+    <div class="card">
+      <div class="card-header">
+        <h3>📊 Results</h3>
+      </div>
+      <div class="card-body" id="results">
+        <div class="alert alert-info">
+          ℹ️ Click a button above to test the API endpoints
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script type="module" src="app.mjs"></script>
+</body>
+
+</html>
